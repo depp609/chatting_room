@@ -19,7 +19,6 @@
 #include <iostream>
 
 #include "clientdialog.h"
-#include "registerin.h"
 #include "instruction.h"
 #include "room.h"
 #include "login.h"
@@ -52,13 +51,12 @@ private:
     Ui::MainWindow *ui;
     clientDialog* new_client;
     login* new_login;
-    registerin* new_reg;
     instruction* new_ins;
     room* new_room;
 
 private slots:
     //服务端发来了信息
-    void  onSocketReadyRead();
+    void onSocketReadyRead();
 
     void on_dengLu_clicked();
 

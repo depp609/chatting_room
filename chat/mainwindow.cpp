@@ -65,7 +65,6 @@ MainWindow::~MainWindow()
     delete tcpClient;
     delete new_client;
     delete new_login;
-    delete new_reg;
     delete new_ins;
     delete ui;
     exit(0);
@@ -187,7 +186,6 @@ void MainWindow::onSocketReadyRead() {                 //聊天 收消息
             Warning::getWarning(this, REPEAT);
         else if(str2 == "NN\n")
             Warning::getWarning(this, EXISTED);
-
         else if(str2[0] == 'U'){                     /*显示服务器返回的当前聊天室成员信息*/
             cout << "[UserInfo]" << str2 << endl;
             new_client->ui->chengyuan->setText(str1);

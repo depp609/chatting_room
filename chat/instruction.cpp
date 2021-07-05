@@ -7,6 +7,7 @@ instruction::instruction(QWidget *parent) :
 {
     /*设置背景*/
     setAutoFillBackground(true);
+
     QPalette pal = this->palette();
     pal.setBrush(backgroundRole(), QPixmap(main_pic));
     setPalette(pal);
